@@ -1,0 +1,42 @@
+<!Doctype html>
+<html>
+<title>
+    ECMC CODE CHALLENGE
+</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+<script src="../static/js/ecmc.js"></script>
+<body>
+
+<div class="container">
+    <div class="col-lg-6" style="padding-top:50px">
+        <h3>Check For Consecutive Numbers</h3>
+        <form role="form">
+            <div class="form-group">
+                <label for="input">Enter the integer one by one :</label>
+                <input id="numberInput" class="form-control" type="number"></input>
+            </div>
+        </form>
+        <div>
+            <button type="button" onclick="addInteger()"value="Click" >click me</button>
+            <button onclick="reset()" >Reset</button>
+        </div>
+
+        <div id="integerArray" style="width:200px; height:50px; ">
+            <p>Entered Numbers</p>
+        </div>
+
+        <div style="padding-top:30px; padding-bottom:10px">
+            <button onclick="searchConsecutiveNumbers()" >Search Indices</button>
+        </div>
+
+        <div id="indicesArray" >
+            <p>List Of Indices</p>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>
