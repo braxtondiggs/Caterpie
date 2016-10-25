@@ -1,0 +1,54 @@
+html {
+    -webkit-font-smoothing: antialiased;
+}
+
+nav {
+    margin-bottom: 40px;
+}
+
+.nav-wrapper .nav-header {
+    font-size: 28px;
+    margin: 0;
+}
+
+.section {
+    margin-bottom: 0;
+}
+
+.btn-add {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+}
+
+.striped .collection-item {
+    padding-left: 60px;
+}
+
+.striped .collection-item:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+.striped .collection-item.highlighted {
+    background-color: #d1c4e9;
+    padding-left: 20px;
+}
+
+.left-star {
+    display: none;
+}
+
+.striped .highlighted .left-star {
+    color: #ffeb3b;
+    display: block;
+}
+
+.striped .collection-item:hover .right {
+    display: block;
+}
+
+.striped .right {
+    color: #f44336;
+    cursor: pointer;
+    display: none;
+}

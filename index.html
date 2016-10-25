@@ -1,42 +1,82 @@
 <!Doctype html>
-<html>
-<title>
-    ECMC CODE CHALLENGE
-</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
-<script src="../static/js/ecmc.js"></script>
-<body>
-
-<div class="container">
-    <div class="col-lg-6" style="padding-top:50px">
-        <h3>Check For Consecutive Numbers</h3>
-        <form role="form">
-            <div class="form-group">
-                <label for="input">Enter the integer one by one :</label>
-                <input id="numberInput" class="form-control" type="number"></input>
+<html lang="en-US">
+    <title>
+        ECMC CODE CHALLENGE
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <body class="teal lighten-5 animated fadeIn">
+        <nav class="z-depth-4">
+            <div class="nav-wrapper valign-wrapper teal darken-1">
+                <div class="container">
+                    <h1 class="nav-header valign center-align">Check For Consecutive Numbers</h1>
+                </div>
             </div>
-        </form>
-        <div>
-            <button type="button" onclick="addInteger()"value="Click" >click me</button>
-            <button onclick="reset()" >Reset</button>
+        </nav>
+        <div class="container">
+            <div class="row section animated bounceInUp">
+                <div class="col s12 m8 offset-m2 l6 offset-l3">
+                    <div class="card">
+                        <div class="card-content">
+                            <span class="card-title">Enter the integer one by one:</span>
+                            <form>
+                                <div class="input-field">
+                                    <div class="row">
+                                        <div class="col s9 m9">
+                                            <input id="numberInput" type="number" class="validate" onkeydown="checkForEnter()">
+                                            <label for="numberInput" data-error="Please enter a vaild number">Number</label>
+                                        </div>
+                                        <div class="col s3 m3" style="padding-left: 0;height: 3rem;position:relative">
+                                            <button class="btn waves-effect waves-light btn-add" type="button" onclick="addInteger()">Add
+                                                <i class="material-icons right">send</i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row section">
+                <div class="col s12 m8 offset-m2 l6 offset-l3">
+                    <div class="card">
+                        <div class="card-content">
+                            <span class="card-title">Entered Numbers</span>
+                            <button type="button" class="waves-effect waves-teal btn-flat right" onclick="reset()">Reset</button>
+                            <ul class="collection striped">
+                                <li class="collection-item highlighted">
+                                    <i class="material-icons left left-star">star</i>88<i class="material-icons right tooltipped" data-position="right" data-delay="50" data-tooltip="Remove Number" onclick="removeNumber()">not_interested</i>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row section">
+                <div class="col s12 m8 offset-m2 l6 offset-l3">
+                    <div class="card">
+                        <div class="card-content">
+                            <span class="card-title">List Of Indices</span>
+                            <div class="divider"></div>
+                            <div class="chips-container section">
+                                <div class="chip">1</div>
+                                <div class="chip">2</div>
+                                <div class="chip">3</div>
+                                <div class="chip">4</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div id="integerArray" style="width:200px; height:50px; ">
-            <p>Entered Numbers</p>
-        </div>
-
-        <div style="padding-top:30px; padding-bottom:10px">
-            <button onclick="searchConsecutiveNumbers()" >Search Indices</button>
-        </div>
-
-        <div id="indicesArray" >
-            <p>List Of Indices</p>
-        </div>
-    </div>
-</div>
-
-</body>
-
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+        <script src="js.js"></script>
+    </body>
 </html>
