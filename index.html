@@ -25,17 +25,15 @@
                         <div class="card-content">
                             <div class="card-title">Enter the integer one by one:</div>
                             <form>
-                                <div class="input-field">
-                                    <div class="row">
-                                        <div class="col s12 m9">
-                                            <input id="numberInput" type="number" class="validate" onkeydown="return checkForEnter(event)">
-                                            <label for="numberInput" data-error="Please enter a vaild number">Number</label>
-                                        </div>
-                                        <div class="col s12 m3" style="padding-left: 0;height: 3rem;position:relative">
-                                            <button id="btnAdd" class="btn waves-effect waves-light btn-add" type="button" onclick="addInteger()">Add
-                                                <i class="material-icons right">send</i>
-                                            </button>
-                                        </div>
+                                <div class="row">
+                                    <div class="col s12 m9 input-field">
+                                        <input id="numberInput" type="number" class="validate" onkeydown="return checkForEnter(event)">
+                                        <label for="numberInput" data-error="Please enter a vaild number">Number</label>
+                                    </div>
+                                    <div class="col s12 m3" style="padding-left: 0;height: 3rem;position:relative">
+                                        <button id="btnAdd" class="btn waves-effect waves-light btn-add" type="button" onclick="addBtnClick()">Add
+                                            <i class="material-icons right">send</i>
+                                        </button>
                                     </div>
                                 </div>
                             </form>
@@ -59,7 +57,7 @@
                                         <i class="material-icons left">search</i>Search Indices
                                     </a>
                                 </div>
-                                <div class="col m4 s12" style="padding-top: 11px;">
+                                <div class="col m4 s12 center-align" style="padding-top: 11px;">
                                     <input type="checkbox" class="filled-in" id="filled-in-box" onchange="setAuto()">
                                     <label for="filled-in-box">Auto Search</label>
                                 </div>

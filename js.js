@@ -14,10 +14,15 @@ var s2 = document.getElementById('section2'),
 function checkForEnter(e) {
 	e = e || window.event;
 	if (e.keyCode == 13) {
-		document.getElementById('btnAdd').click();
+		addInteger();
 		return false;
 	}
 	return true;
+}
+
+function addBtnClick() {
+	document.getElementById('numberInput').removeClass('valid').nextElementSibling.removeClass('active');
+	addInteger();
 }
 /**
  * @desc validates, adds number to array, add number HTML to view and init tooltip
@@ -29,7 +34,6 @@ function addInteger() {
 		integerArray.push(integerValue);
 		list.innerHTML += '<li class="collection-item animated bounceInLeft"><i class="material-icons left left-star yellow-text">star</i>' + integerValue + '<i class="material-icons right tooltipped red-text" data-position="right" data-delay="50" data-tooltip="Remove Number" onclick="removeNumber(event)">not_interested</i></li>';
 		numInput.value = '';
-		numInput.removeClass('valid').nextElementSibling.removeClass('active');
 		$('.tooltipped').tooltip(); //jquery tooltip
 		setTimeout(function () {
 			list.children[integerArray.length - 1].removeClass('animated').removeClass('bounceInLeft');

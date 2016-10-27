@@ -1,5 +1,6 @@
 html {
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .hide-opacity {
@@ -35,7 +36,9 @@ nav {
   line-height: 28px;
   margin-bottom: 25px;
 }
-
+.input-field {
+  margin: 0;
+}
 
 /** list table **/
 
