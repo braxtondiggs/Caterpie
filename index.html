@@ -54,14 +54,14 @@
                             <ul id="number-collection" class="collection striped"></ul>
                             <div class="divider"></div>
                             <div class="row section">
-                                <div class="col m8 center-align">
+                                <div class="col m8 s12 center-align">
                                     <a class="waves-effect waves-light btn" onclick="searchConsecutiveNumbers()">
                                         <i class="material-icons left">search</i>Search Indices
                                     </a>
                                 </div>
-                                <div class="col m4" style="padding-top: 11px;">
+                                <div class="col m4 s12" style="padding-top: 11px;">
                                     <input type="checkbox" class="filled-in" id="filled-in-box" onchange="setAuto()">
-                                    <label for="filled-in-box">Auto-Submit</label>
+                                    <label for="filled-in-box">Auto Search</label>
                                 </div>
                             </div>
                         </div>
@@ -72,9 +72,14 @@
                 <div class="col s12 m8 offset-m2 l6 offset-l3">
                     <div class="card">
                         <div class="card-content">
-                            <span class="card-title">List Of Indices</span>
-                            <div class="divider"></div>
-                            <div class="chips-container section"></div>
+                            <div id="listIndices" class="hide">
+                                <span class="card-title">List Of Indices</span>
+                                <div class="divider"></div>
+                                <div class="chips-container section"></div>
+                            </div>
+                            <div id="noRuns" class="hide">
+                                <div class="card-title red-text center-align" style="margin-top: 25px;">No Runs Found</div>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -59,7 +59,6 @@ nav {
 .striped .highlighted .left-star {
   display: block;
   visibility: visible;
-  color: #ffeb3b;
 }
 
 .striped .collection-item:hover .right {
@@ -69,5 +68,4 @@ nav {
 .striped .right {
   display: none;
   cursor: pointer;
-  color: #f44336;
 }
