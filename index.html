@@ -5,7 +5,7 @@
     </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
@@ -19,20 +19,20 @@
             </div>
         </nav>
         <div class="container">
-            <div class="row section animated bounceInUp">
+            <div id="section1" class="row section animated bounceInUp">
                 <div class="col s12 m8 offset-m2 l6 offset-l3">
                     <div class="card">
                         <div class="card-content">
-                            <span class="card-title">Enter the integer one by one:</span>
+                            <div class="card-title">Enter the integer one by one:</div>
                             <form>
                                 <div class="input-field">
                                     <div class="row">
-                                        <div class="col s9 m9">
-                                            <input id="numberInput" type="number" class="validate" onkeydown="checkForEnter()">
+                                        <div class="col s12 m9">
+                                            <input id="numberInput" type="number" class="validate" onkeydown="return checkForEnter(event)">
                                             <label for="numberInput" data-error="Please enter a vaild number">Number</label>
                                         </div>
-                                        <div class="col s3 m3" style="padding-left: 0;height: 3rem;position:relative">
-                                            <button class="btn waves-effect waves-light btn-add" type="button" onclick="addInteger()">Add
+                                        <div class="col s12 m3" style="padding-left: 0;height: 3rem;position:relative">
+                                            <button id="btnAdd" class="btn waves-effect waves-light btn-add" type="button" onclick="addInteger()">Add
                                                 <i class="material-icons right">send</i>
                                             </button>
                                         </div>
@@ -43,33 +43,38 @@
                     </div>
                 </div>
             </div>
-            <div class="row section">
+            <div id="section2" class="row section hide-opacity">
                 <div class="col s12 m8 offset-m2 l6 offset-l3">
                     <div class="card">
                         <div class="card-content">
-                            <span class="card-title">Entered Numbers</span>
-                            <button type="button" class="waves-effect waves-teal btn-flat right" onclick="reset()">Reset</button>
-                            <ul class="collection striped">
-                                <li class="collection-item highlighted">
-                                    <i class="material-icons left left-star">star</i>88<i class="material-icons right tooltipped" data-position="right" data-delay="50" data-tooltip="Remove Number" onclick="removeNumber()">not_interested</i>
-                                </li>
-                            </ul>
+                            <div style="margin-bottom: 25px;">
+                                <span class="card-title">Entered Numbers</span>
+                                <button type="button" class="waves-effect waves-teal btn-flat right" onclick="reset()">Reset</button>
+                            </div>
+                            <ul id="number-collection" class="collection striped"></ul>
+                            <div class="divider"></div>
+                            <div class="row section">
+                                <div class="col m8 center-align">
+                                    <a class="waves-effect waves-light btn" onclick="searchConsecutiveNumbers()">
+                                        <i class="material-icons left">search</i>Search Indices
+                                    </a>
+                                </div>
+                                <div class="col m4" style="padding-top: 11px;">
+                                    <input type="checkbox" class="filled-in" id="filled-in-box" onchange="setAuto()">
+                                    <label for="filled-in-box">Auto-Submit</label>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row section">
+            <div id="section3" class="row section hide-opacity">
                 <div class="col s12 m8 offset-m2 l6 offset-l3">
                     <div class="card">
                         <div class="card-content">
                             <span class="card-title">List Of Indices</span>
                             <div class="divider"></div>
-                            <div class="chips-container section">
-                                <div class="chip">1</div>
-                                <div class="chip">2</div>
-                                <div class="chip">3</div>
-                                <div class="chip">4</div>
-                            </div>
+                            <div class="chips-container section"></div>
                         </div>
                     </div>
                 </div>

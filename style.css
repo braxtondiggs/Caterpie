@@ -1,54 +1,73 @@
 html {
-    -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
 }
 
-nav {
-    margin-bottom: 40px;
-}
-
-.nav-wrapper .nav-header {
-    font-size: 28px;
-    margin: 0;
-}
-
-.section {
-    margin-bottom: 0;
+.hide-opacity {
+  opacity: 0;
 }
 
 .btn-add {
-    bottom: 0;
-    left: 0;
-    position: absolute;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
-.striped .collection-item {
-    padding-left: 60px;
+
+/** navigation **/
+
+nav {
+  margin-bottom: 40px;
+}
+
+.nav-wrapper .nav-header {
+  font-size: 28px;
+  margin: 0;
+}
+
+
+/** card, section **/
+
+.section {
+  margin-bottom: 0;
+}
+
+.card .card-content .card-title {
+  line-height: 28px;
+  margin-bottom: 25px;
+}
+
+
+/** list table **/
+
+.striped {
+  width: 100%;
 }
 
 .striped .collection-item:nth-child(odd) {
-    background-color: #f2f2f2;
+  background-color: #f2f2f2;
 }
 
 .striped .collection-item.highlighted {
-    background-color: #d1c4e9;
-    padding-left: 20px;
+  padding-left: 20px;
+  background-color: #d1c4e9;
 }
 
 .left-star {
-    display: none;
+  visibility: hidden;
 }
 
 .striped .highlighted .left-star {
-    color: #ffeb3b;
-    display: block;
+  display: block;
+  visibility: visible;
+  color: #ffeb3b;
 }
 
 .striped .collection-item:hover .right {
-    display: block;
+  display: block;
 }
 
 .striped .right {
-    color: #f44336;
-    cursor: pointer;
-    display: none;
+  display: none;
+  cursor: pointer;
+  color: #f44336;
 }
