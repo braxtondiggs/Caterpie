@@ -47,7 +47,7 @@
                         <div class="card-content">
                             <div style="margin-bottom: 25px;">
                                 <span class="card-title">Entered Numbers</span>
-                                <button type="button" class="waves-effect waves-teal btn-flat right" onclick="reset()">Reset</button>
+                                <button type="button" class="waves-effect waves-teal btn-flat right" onclick="resetConfirm()">Reset</button>
                             </div>
                             <ul id="number-collection" class="collection striped"></ul>
                             <div class="divider"></div>
@@ -81,6 +81,15 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div id="modalConfirm" class="modal" style="max-width: 350px">
+            <div class="modal-content">
+                <h4 class="center-align" style="font-size: 23px">Are you sure you want to reset everything?</h4>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-action modal-close waves-effect waves-green btn-flat">Cancel</button>
+                <button class="modal-action modal-close waves-effect waves-green btn" onclick="reset()">Reset</button>
             </div>
         </div>
         <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>

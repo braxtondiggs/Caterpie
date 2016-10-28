@@ -56,6 +56,10 @@ function reset() {
 		checkBox.checked = false;
 	}, animationTime);
 };
+
+function resetConfirm() {
+	$('#modalConfirm').openModal();
+}
 /**
  * @desc removes number from the collection
  * @param object event - event handler
@@ -74,6 +78,7 @@ function removeNumber(event) {
 
 function setAuto() {
 	auto = checkBox.checked;
+	if (auto) searchConsecutiveNumbers();
 }
 /**
  * @desc searches through array and get index, handles listed highlighted section and shows indices chips
